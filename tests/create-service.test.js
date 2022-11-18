@@ -16,7 +16,8 @@ describe('Create Service', () => {
   })
   it('should create a todo', async function () {
     const name = 'test'
-    await createService({ strapi }).create({ name })
+    const todo = await createService({ strapi }).create({ name })
     expect(strapi.query('plugin::todo.todo').create).toBeCalledTimes(1)
+    expect(todo.data.name).toBe('test')
   })
 })

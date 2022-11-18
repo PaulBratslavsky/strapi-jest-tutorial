@@ -1,6 +1,6 @@
 let todoController = require('../server/controllers/todo-controller');
 
-describe('Submit Controller', () => {
+describe('Todo Controller', () => {
   let strapi
   beforeEach(async function () {
     // mock this teh strapi object to allow for calling of create  await strapi.plugin('todo').service('create').create({ name })

@@ -6,5 +6,12 @@
     },
     "cSpell.enableFiletypes": [
         "!javascript"
+    ],
+    "grammarly.selectors": [
+        {
+            "language": "markdown",
+            "scheme": "file",
+            "pattern": "post.md"
+        }
     ]
 }
