@@ -1,7 +1,7 @@
 'use strict'
 
-const submitController = require('./submit-controller')
+const todoController = require('./todo-controller')
 
 module.exports = {
-  submitController,
+  todoController,
 }

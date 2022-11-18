@@ -3,8 +3,8 @@ module.exports = {
   routes: [
     {
       method: 'POST',
-      path: '/submit',
-      handler: 'submitController.index',
+      path: '/create',
+      handler: 'todoController.index',
       config: {
         policies: [],
       },

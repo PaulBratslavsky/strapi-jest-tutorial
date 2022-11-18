@@ -1,9 +1,7 @@
 'use strict'
 
-const submission = require('./submission')
-const recipient = require('./recipient')
+const todo = require('./todo')
 
 module.exports = {
-  submission: { schema: submission },
-  recipient: { schema: recipient },
+  todo: { schema: todo }
 }
