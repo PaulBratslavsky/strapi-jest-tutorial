@@ -15,7 +15,7 @@ module.exports = {
       visible: true
     },
     'content-type-builder': {
-      visible: false
+      visible: true
     }
   },
   attributes: {

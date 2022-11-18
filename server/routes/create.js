@@ -9,5 +9,13 @@ module.exports = {
         policies: [],
       },
     },
+    {
+      method: 'POST',
+      path: '/complete',
+      handler: 'todoController.complete',
+      config: {
+        policies: [],
+      },
+    },
   ],
 }

@@ -1,17 +1,18 @@
 module.exports = ({ strapi }) => ({
-    async create(ctx) {
-        const { name } = ctx.request.body;
-      //query the todo table
-      try {
-        await strapi.query("plugin::todo.todo").create(
-          {
-            name,
-          }
-        );
-      } catch (e) {
-        strapi.log.error(e);
+  async create({ name }) {
+    //query the todo table
+    try {
+      await strapi.query('plugin::todo.todo').create({
+        data: {
+          name,
+          status: false,
+        }
       }
-    },
-  });
-  
+      )
+    } catch (e) {
+      strapi.log.error(e)
+    }
+  },
+});
+
 

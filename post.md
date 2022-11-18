@@ -7,6 +7,8 @@
 
 ## Introduction
 Testing is a very important part of software development. It allows you to ensure that your code is working as expected and that it will continue to work as expected in the future. In this article, we'll be looking how to add unit tests using the [Jest](https://jestjs.io/) testing framework to your Strapi plugin.
+
+The code for this tutorial is based off of a simple todo plugin which you can find [here](https://github.com/excl-networks/strapi-jest-tutorial)
 ## Prerequisites
 
 To follow along with this post you will need the following
@@ -14,6 +16,7 @@ To follow along with this post you will need the following
 - [A v4 Strapi Plugin](https://strapi.io/blog/how-to-create-a-strapi-v4-plugin-generate-a-plugin-1-6)
 - Understanding of Javascript
 - Understanding of Strapi
+- A basic understanding of Jest
 - Git and GitHub (Required for Actions)
 
 ## What Is Jest
@@ -47,15 +50,11 @@ Jest has a lot of global configuration variables but for the purpose of this tut
 
 First we are going to create a new folder to store all of our tests, you should create this in the root of your application and name is `tests`.
 
-All tests are going to end with `.test.js` (or `.test.ts`). We can go ahead and create our first test file. Create a new file called `tests/submit-controller.test.js` and add the following code to it.
+All tests are going to end with `.test.js` (or `.test.ts`). We can go ahead and create our first test file. Create a new file called `tests/todo-controller.test.js` and add the following code to it.
 
-```js
-describe('Submit Controller', () => {
-  it('should return true', () => {
-    expect(true).toBe(true);
-  });
-});
-```
+
+## Creating Our First Test Suite
+
 
 
 ## Mocking the Strapi Object

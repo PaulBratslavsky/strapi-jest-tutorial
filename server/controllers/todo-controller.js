@@ -3,15 +3,13 @@
 module.exports = ({ strapi }) => ({
   async index(ctx) {
     const { name } = ctx.request.body
-    const todo = await strapi.services.todo.create({ name })
-    return todo
+    await strapi.plugin('todo').service('create').create({ name })
+    return ctx.body = 'created'
   },
   async complete(ctx) {
-    const { id } = ctx.params
-    const todo = await strapi.services.todo.update({ id }, {
-      status: true
-    })
-    return todo
+    const { id } = ctx.request.body
+    await strapi.plugin('todo').service('complete').complete({ id })
+    return ctx.body = 'todo completed'
   },
 })
 
