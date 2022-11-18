@@ -1,0 +1,11 @@
+{
+    "extensions": [
+      "GitHub.github-vscode-theme",
+      "esbenp.prettier-vscode",
+      "dbaeumer.vscode-eslint",
+      "stylelint.vscode-stylelint"
+      // Additional Extensions Here
+    ],
+    "onCreateCommand": "bash .devcontainer/setup.sh", //Set Terminal Prompt to $
+    "postStartCommand": "yarn --cwd /workspaces/strapi-wrapper develop"
+  }
